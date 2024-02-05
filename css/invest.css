@@ -1,0 +1,158 @@
+body {
+    background-image: url(../images/background.jpg);
+    font-family: 'Century Gothic';
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 20px;
+}
+header a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 20px;
+    border: 1px solid transparent;
+    transition: .5s;
+}
+header nav .active {
+    color: mediumpurple;
+}
+header nav a:hover {
+    border: 1px solid mediumpurple;
+}
+.hamburger {
+    position: relative;
+    width: 45px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    border: none;
+    z-index: 1;
+}
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    background-color: white;
+    content:'';
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin: 0 0 6px 0;
+    transition: .4s;
+}
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+.profile-nav {
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 25%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 0;
+    padding-top: 30px;
+    transition: .4s;
+    box-sizing: border-box;
+}
+.profile-nav.is-active {
+    left: 75%;
+}
+.profile-nav a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5px;
+    transition: .5s;
+    &:hover{
+        background-color: mediumpurple;
+    }
+}
+.personalinfo .name h2 {
+    font-size: 1.5em;
+    margin: 0 0 20px 50px;
+}
+.personalinfo .details .title{
+    margin: 50px 0 20px 50px;
+}
+.personalinfo .details .category{
+    padding: 10px 0 0 75px;
+    
+}
+.personalinfo .details .detailinfo{
+    padding: 0 0 10px 100px;
+}
+.logout a{
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+.form {
+    background-color: rgba(255, 255, 255, 0.25);
+    color:white;
+    border-radius: 20px;
+    padding: 50px;
+    width: 500px;
+}
+.form h1 {
+    color: mediumpurple;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+.form input, .form select {
+    outline: none;
+    border: none;
+    font-size: 1.25em;
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+.form input[type=submit]{
+    background-color: mediumpurple;
+    color: black;
+    width: 100%;
+    transition: 0.7s;
+}
+.form input[type=submit]:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+}
+.form p {
+    text-align: center;
+}
+.results {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.form a{
+    color: white;
+    text-decoration: none;
+}
+.form a:hover {
+    text-decoration: underline;
+}

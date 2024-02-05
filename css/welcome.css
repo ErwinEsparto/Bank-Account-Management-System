@@ -1,0 +1,117 @@
+body {
+    background-image: url(../images/background.jpg);
+    font-family: 'Century Gothic';
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 50px;
+    padding: 20px;
+}
+header a {
+    color: white;
+    text-decoration: none;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}
+nav.sections {
+    margin-right: 50px;
+}
+nav.sections a {
+    text-align: center;
+    margin: 0 10px;
+    padding: 20px;
+    border: 1px solid transparent;
+    transition: .5s;
+}
+nav.sections .active {
+    color: mediumpurple;
+    pointer-events: none;
+}
+nav.sections a:hover {
+    border: 1px solid mediumpurple;
+}
+nav.login a {
+    background-color: blueviolet;
+    border-radius: 25px;
+    padding: 10px 50px;
+    transition: .7s;
+}
+nav.login a:hover {
+    background-color: mediumpurple;
+}
+section#main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    margin: 50px;
+}
+section#main .title {
+    margin-right: 50px;
+}
+section#main .title h1 {
+    background-image: url(../images/textbg.png);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Impact';
+    font-size: 10em;
+    margin: 0;
+}
+section#main .title .description {
+    font-family: 'Arial';
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+#features {
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 75px 0;
+    padding: 50px 0;
+}
+#features .featureone, #features .featuretwo, #features .featurethree {
+    width: 25%;
+    margin: 20px 70px;
+    text-align: justify;
+    text-align-last: center;
+}
+#features .featureone img, #features .featuretwo img, #features .featurethree img {
+    width: 100px;
+    text-align: center;
+}
+section .picture img {
+    width: 500px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px blur;
+    filter: brightness(80%);
+}
+section#map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contacts {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin: 50px 0;
+    padding: 0;
+}
+.contacts .contactone, .contacts .contacttwo, .contacts .contactthree {
+    width: 25%;
+    margin: 20px 70px;
+    text-align: justify;
+    text-align-last: center;
+}
+.contacts .contactone img, .contacts .contacttwo img, .contacts .contactthree img {
+    width: 30px;
+    text-align: center;
+}

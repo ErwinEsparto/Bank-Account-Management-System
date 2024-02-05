@@ -1,0 +1,61 @@
+body{
+    background-image: url("../images/loginbg.jpg");
+    background-size: cover;
+    font-family: 'Century Gothic';
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form {
+    background-color: rgba(255, 255, 255, 0.25);
+    color:white;
+    border-radius: 20px;
+    padding: 50px;
+    width: 500px;
+}
+.form h1 {
+    color: rgb(224, 101, 224);
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 60px;
+}
+.form input {
+    outline: none;
+    border: none;
+    font-size: 1.25em;
+    border-radius: 5px;
+    width: 92%;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+}
+.form input[type=submit]{
+    background-color: rgb(224, 101, 224);
+    color: black;
+    width: 100%;
+    transition: 0.7s;
+}
+.form input[type=submit]:hover{
+    background-color: mediumpurple;
+    cursor: pointer;
+}
+.links{
+    display: flex;
+    justify-content: center;
+}
+.links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+.form p {
+    text-align: center;
+    margin-bottom: 30px;
+}

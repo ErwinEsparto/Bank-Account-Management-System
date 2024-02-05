@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <main>
+        <section>
+            <form action="../python/register.py" method="POST">
+                <div class="registerform">
+                    <section>
+                        <h1> Sign Up </h1>
+                        <input type="text" name="firstName" placeholder="First Name" required>
+                        <input type="text" name="lastName" placeholder="Last Name" required>
+                        <input type="text" name="address" placeholder="Address" required>
+                        <input type="text" name="contactNumber" placeholder="Contact Number" required>
+                        <input type="text" name="emailAddress" placeholder="Email Address" required>
+                    </section>
+                    <section>
+                        <input type="date" name="birthDate" placeholder="Birth Date" required>
+                        <input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female
+                        <input type="text" name="bankNumber" placeholder="Bank Number" required>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="submit" name="submit" value="Sign up" class="btnLogin">
+                        <div class="links">
+                            <a class="btnRegister" href="login.html">Already have an account? Log In!</a>
+                            <a class="btnRegister" href="welcome.html">Return to Homepage</a>
+                        </div>
+                    </section>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
