@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Transfer </title>
-    <link rel="stylesheet" href="../css/firstInvest.css">
+    <title> Edit Profile </title>
+    <link rel="stylesheet" href="../css/editProfile.css">
 </head>
 <body>
     <?php
@@ -56,56 +56,47 @@
             </section>
         </div>
         <div class="logout">
-            <a href="editProfile.php?userId=<?php echo $_GET['userId']; ?>"> Edit Profile </a>
+            <a href="#"> Edit Profile </a>
             <a href="changepin.php?userId=<?php echo $_GET['userId']; ?>"> Change Pin </a>
             <a href="welcome.html"> Logout </a>
         </div>
     </nav>
     <main>
-        <section class="form">
+        <section class="editprofileform">
             <form method="POST">
-                <h1> First time investing? </h1>
-                <p class="description"> 
-                    Grow your wealth with strategic investments in stocks, bonds, or real estate. Despite risks, smart decisions and diversification can lead to long-term gains. 
-                    Start investing now for a brighter financial future.
-                </p>
+                <h1> Edit Profile </h1>
                 <input type='hidden' name='id' value="<?php echo $account['userId']; ?>" required>
-                <label for="targetAmount"> Target Amount: </label>
-                <input type="number" name="targetAmount" min="5000" step="1000" oninput="validity.valid||(value='');" required>
-                <label for="confirmAmount"> Confirm Amount: </label>
-                <input type="number" name="confirmAmount" min="5000" step="1000" oninput="validity.valid||(value='');" required>
-                <input type="password" name="currentPin" placeholder="Enter Pin" required>
-                <input type="submit" name="submit" value="Invest Now!">
-                <div class="results">
-                    <?php
-                        if(isset($_POST["submit"])){
-                            $targetAmount = (float)$_POST["targetAmount"];
-                            $confirmAmount = (float)$_POST["confirmAmount"];
-                            $currentPin = $_POST["currentPin"];
-
-                            if ($account['password'] != $currentPin) {
-                                echo "<p> Pin is incorrect. </p>";
-                            }
-                            else if ($targetAmount != $confirmAmount) {
-                                echo "<p> Amounts are not the same. </p>";
-                            }
-                            else {
-                                $userId = $_POST["id"];
-                                mysqli_query($conn, "UPDATE users SET investStatus=1, investTarget=$confirmAmount WHERE userId='".$_GET['userId']."'");
-                                echo "<p> Successfully recorded. </p>";
-                                echo "<a href=transactions.php?userId=$userId> Click here to refresh your invest status. </a>";
-                            }
-                        }
-                    ?>
-                </div>
-                
+                <label for="address">Address: </label>
+                <input type="text" name="address" placeholder="Address" value="<?php echo $account['address']; ?>" required>
+                <label for="contactNumber">Contact Number: </label>
+                <input type="text" name="contactNumber" placeholder="Contact Number" value="<?php echo $account['contactNumber']; ?>" required>
+                <label for="emailAddress">Email Address: </label>
+                <input type="text" name="emailAddress" placeholder="Email Address" value="<?php echo $account['emailAddress']; ?>" required>
+                <label for="birthDate">Birth Date: </label>
+                <input type="date" name="birthDate" placeholder="Birth Date" value="<?php echo $account['birthDate']; ?>" required>
+                <input type="password" name="password" placeholder="Current Pin" required>
+                <input type="submit" name="submit" value="Update Profile">
             </form>
-            <div class="img">
-                <img src="../images/firstInvest.jpg">
-            </div>
+            <?php
+                if(isset($_POST["submit"])){
+                    $address = $_POST["address"];
+                    $contactNumber = $_POST["contactNumber"];
+                    $emailAddress = $_POST["emailAddress"];
+                    $birthDate = $_POST["birthDate"];
+                    $password = $_POST["password"];
+
+                    if ($account['password'] != $password) {
+                        echo "<p> Incorrect Pin. </p>";
+                    }
+                    else {
+                        $userId = $_POST["id"];
+                        mysqli_query($conn, "UPDATE users SET address='$address', contactNumber='$contactNumber', emailAddress='$emailAddress', birthDate='$birthDate'  WHERE userId='".$_GET['userId']."'");
+                        echo "<p> Profile Details updated. </p>";
+                    }
+                }
+            ?>
         </section>
     </main>
-
     <script src="../javascript/script.js"></script>
 </body>
 </html>

@@ -56,6 +56,7 @@
             </section>
         </div>
         <div class="logout">
+            <a href="editProfile.php?userId=<?php echo $_GET['userId']; ?>"> Edit Profile </a>
             <a href="changepin.php?userId=<?php echo $_GET['userId']; ?>"> Change Pin </a>
             <a href="welcome.html"> Logout </a>
         </div>
@@ -65,25 +66,6 @@
             <div class="title">
                 <h1> Welcome back, <?php echo $account['firstName']; ?> </h1>
                 <p> Check out these news today. </p>
-            </div>
-            <div class="balance">
-                <div class="head">
-                    <h2> Current Balance: </h2>
-                    <a href="transactions.php?userId=<?php echo $_GET['userId']; ?>"> Cash In </a>
-                </div>
-                <div class="container">
-                    <div class="savingscontainer">
-                        <div class="savings">
-                            <h3> Savings: </h3>
-                            <p> ₱<?php echo $account['savings']; ?> </p>
-                        </div>
-                        <div class="cryptosavings">
-                            <h3> CryptoSavings:  </h3>
-                            <p> ₱<?php echo $account['cryptosavings']; ?> </p>
-                        </div>
-                    </div>
-                    <img src="../images/money.gif"/>
-                </div>
             </div>
         </section>
         <section class="news">
@@ -97,6 +79,25 @@
                         <p> Now Available </p>
                     </div>
                 </div>
+                <div id="balance">
+                    <div class="head">
+                        <h2> Current Balance: </h2>
+                        <a href="transactions.php?userId=<?php echo $_GET['userId']; ?>"> Cash In </a>
+                    </div>
+                    <div class="container">
+                        <div class="savingscontainer">
+                            <div class="savings">
+                                <h3> Savings: </h3>
+                                <p> ₱<?php echo $account['savings']; ?> </p>
+                            </div>
+                            <div class="cryptosavings">
+                                <h3> CryptoSavings:  </h3>
+                                <p> ₱<?php echo $account['cryptosavings']; ?> </p>
+                            </div>
+                        </div>
+                        <img src="../images/money.gif"/>
+                    </div>
+                </div>
                 <div class="upperNews">
                     <div class="icon">
                         <img src="../images/interest.gif"/>
@@ -104,15 +105,6 @@
                     <div class="description">
                         <h3> Savings Interest </h3>
                         <p> Up to 7% annually! </p>
-                    </div>
-                </div>
-                <div class="upperNews">
-                    <div class="icon">
-                        <img src="../images/international.gif"/>
-                    </div>
-                    <div class="description">
-                        <h3> International Transaction </h3>
-                        <a href="balance.php?userId=<?php echo $_GET['userId']; ?>"> To Be Announced </a>
                     </div>
                 </div>
             </div>

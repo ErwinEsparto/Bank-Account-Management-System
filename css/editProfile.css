@@ -22,6 +22,7 @@ header a {
 }
 header nav .active {
     color: mediumpurple;
+    pointer-events: none;
 }
 header nav a:hover {
     border: 1px solid mediumpurple;
@@ -104,29 +105,21 @@ header nav a:hover {
 main {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-    width: 100%;
 }
-section.form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.editprofileform {
     background-color: rgba(255, 255, 255, 0.25);
     color:white;
-    border-radius: 20px;
     padding: 50px;
-    width: 50%;
+    border-radius: 20px;
+    width: 500px;
 }
-form {
-    margin-right: 50px;
-}
-.form h1 {
+h1 {
     color: mediumpurple;
+    text-align: center;
     font-size: 2.5em;
-    margin-bottom: 40px;
+    margin: 0 0 30px 0;
 }
-.form input, .form select {
-    display: block;
+.editprofileform input[type=text],.editprofileform input[type=date], .editprofileform input[type=password], .editprofileform input[type=submit]  {
     outline: none;
     border: none;
     font-size: 1.25em;
@@ -136,34 +129,23 @@ form {
     margin-bottom: 30px;
     box-sizing: border-box;
 }
-.form input[type=submit]{
+.editprofileform input[type=radio] {
+    font-size: 1.25em;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.editprofileform input[type=submit]{
     background-color: mediumpurple;
     color: black;
     width: 100%;
     transition: 0.7s;
 }
-.form input[type=submit]:hover{
+.editprofileform input[type=submit]:hover{
     background-color: blueviolet;
     cursor: pointer;
 }
-.form .description {
-    width: 100%;
-    margin-bottom: 50px;
-}
-.results {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.form a{
-    color: white;
-    text-decoration: none;
-}
-.form a:hover {
-    text-decoration: underline;
-}
-.img img {
- height: 650px;
- border-radius: 25px;
+.editprofileform p {
+    text-align: center;
+    margin: 0;
 }

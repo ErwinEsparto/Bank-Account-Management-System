@@ -93,7 +93,7 @@ header nav a:hover {
     margin: 50px 0 20px 50px;
 }
 .personalinfo .details .category{
-    padding: 10px 0 0 75px;
+    padding: 0 0 0 75px;
     
 }
 .personalinfo .details .detailinfo{
@@ -116,7 +116,6 @@ section.welcome {
     background-size: cover;
     background-position: center bottom;
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
     position: absolute;
     top: 0;
@@ -125,21 +124,31 @@ section.welcome {
     padding-top: 150px;
     z-index: 0;
 }
-section .balance{
+section .title {
+    margin: 0 80px;
+}
+section #balance{
+    display: flex;
+    justify-content: space-between;
     background-color: white;
     color: black;
     display: flex;
     flex-direction: column;
-    padding: 20px 50px;
+    padding: 25px 50px 15px 50px;
     width: 20%;
-    height: 60%;
+    height: 120%;
+    margin-top: -80px;
     border-radius: 25px;
+    box-shadow: 0 0 15px gray;
 }
 .head {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+.head h2 {
+    margin: 0;
 }
 .head a {
     background-color: mediumpurple;
@@ -160,10 +169,9 @@ section .balance{
     flex-direction: row;
     justify-content: space-between;
 }
-section .title, section .balance {
-    margin: 0 80px;
+.savings p, .cryptosavings p {
+    margin-left: 30px;
 }
-
 section .title h1 {
     font-size: 5em;
     margin-bottom: 0;

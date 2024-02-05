@@ -60,6 +60,7 @@
             </section>
         </div>
         <div class="logout">
+            <a href="editProfile.php?userId=<?php echo $_GET['userId']; ?>"> Edit Profile </a>
             <a href="changepin.php?userId=<?php echo $_GET['userId']; ?>"> Change Pin </a>
             <a href="welcome.html"> Logout </a>
         </div>

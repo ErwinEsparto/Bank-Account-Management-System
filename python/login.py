@@ -13,7 +13,7 @@ import mysql.connector
 con=mysql.connector.connect(user="root", password="", host="localhost", database="bankdb")
 query=con.cursor()
 
-statement = "SELECT userId FROM users WHERE bankNumber=%s AND password=%s"
+statement = "SELECT * FROM users WHERE bankNumber=%s AND password=%s"
 query.execute(statement, (bankNumber, password))
 account = query.fetchone()
 
@@ -58,6 +58,14 @@ if not account:
           """)
 else:
     userAccount = account[0]
+    userGroup = account[15]
+
+    home = ""
+    if userGroup != 1:
+        home = f"<a href='../html/home.php?userId={userAccount}'> Go to Homepage</a>"
+    else:
+        home = f"<a href='../html/adminView.php?userId={userAccount}'> Go to Homepage</a>"
+
     print(f"""
             <html lang="en">
             <head>
@@ -89,7 +97,7 @@ else:
                         <div class="loginform">
                                 <h1> Successful Log In </h1>
                                 <div class="link">
-                                    <a href='../html/home.php?userId={userAccount}'> Go to Homepage</a>
+                                    {home}
                                     <a href="../html/login.html">Logout</a>
                                 </div>
                         </div>
