@@ -1,0 +1,213 @@
+body {
+    background-image: url(../images/background.jpg);
+    font-family: 'Century Gothic';
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 30px;
+    padding: 20px;
+    z-index: 3;
+}
+header a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 20px;
+    border: 1px solid transparent;
+    transition: .5s;
+}
+header nav .active {
+    color: mediumpurple;
+    pointer-events: none;
+}
+header nav a:hover {
+    border: 1px solid mediumpurple;
+}
+.hamburger {
+    position: relative;
+    width: 45px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    border: none;
+    z-index: 2;
+}
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    background-color: white;
+    content:'';
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin: 0 0 6px 0;
+    transition: .4s;
+}
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+.profile-nav {
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 25%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 1;
+    padding-top: 30px;
+    transition: .4s;
+    box-sizing: border-box;
+}
+.profile-nav.is-active {
+    left: 75%;
+}
+.profile-nav a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5px;
+    transition: .5s;
+    &:hover{
+        background-color: mediumpurple;
+    }
+}
+.personalinfo .name h2 {
+    font-size: 1.5em;
+    margin: 0 0 20px 50px;
+}
+.personalinfo .details .title{
+    margin: 50px 0 20px 50px;
+}
+.personalinfo .details .category{
+    padding: 0 0 0 75px;
+    
+}
+.personalinfo .details .detailinfo{
+    padding: 0 0 10px 100px;
+}
+.logout a{
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+.form {
+    color:white;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+}
+.form h1 {
+    color: mediumpurple;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0 0 30px 0;
+}
+section #savings{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    padding: 25px 50px 15px 50px;
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 0 15px gray;
+    box-sizing: border-box;
+}
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.head h2 {
+    margin: 0;
+}
+.container, .purchase{
+    background-color: rgba(255, 255, 255, 0.25);
+    margin: 0 20px;
+    border-radius: 20px;
+    padding: 50px;
+    width: 100%;
+}
+.savingscontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.savingscontainer img {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}
+.cryptosavings {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cryptosavings h3, .cryptosavings p {
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+}
+.purchase form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.purchase h2 {
+    color: mediumpurple;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 30px 0 20px 0;
+}
+.purchase input, .purchase select {
+    outline: none;
+    border: none;
+    font-size: 1.25em;
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+.purchase input[type=submit]{
+    background-color: mediumpurple;
+    color: black;
+    width: 100%;
+    transition: 0.7s;
+}
+.purchase input[type=submit]:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+}
+.purchase .result {
+    text-align: center;
+}
+.info .description {
+    text-align: justify;
+    text-align-last: center;
+}
+.info img {
+    width: 100%;
+    margin: 20px 0 0 0;
+    border-radius: 25px;
+    filter: brightness(70%);
+}
