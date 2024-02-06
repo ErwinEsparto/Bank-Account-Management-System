@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2024 at 03:28 AM
+-- Generation Time: Feb 06, 2024 at 06:48 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -39,18 +39,6 @@ CREATE TABLE `transactions` (
   `userId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `transactions`
---
-
-INSERT INTO `transactions` (`transactionId`, `bankNumber`, `amount`, `type`, `from`, `to`, `balance`, `date`, `userId`) VALUES
-(1, 20240101, 5000, 'Redeem', 'Investment', 'CryptoSavings', 16290, '2024-02-05', 1),
-(2, 20240101, 500, 'Invest', 'Savings', 'Investment', 11500, '2024-02-05', 1),
-(3, 20240101, 5000, 'Invest', 'CryptoSavings', 'Investment', 11290, '2024-02-05', 1),
-(4, 20240101, 4500, 'Invest', 'Savings', 'Investment', 7000, '2024-02-05', 1),
-(5, 20240101, 10000, 'Redeem', 'Investment', 'Savings', 17000, '2024-02-05', 1),
-(6, 20240102, 2000, 'Deposit', 'GCASH', 'Savings', 2000, '2024-02-06', 2);
-
 -- --------------------------------------------------------
 
 --
@@ -82,7 +70,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`userId`, `firstName`, `lastName`, `address`, `emailAddress`, `contactNumber`, `birthDate`, `gender`, `bankNumber`, `password`, `savings`, `cryptosavings`, `investStatus`, `investTarget`, `investCurrent`, `accountType`, `dateCreated`) VALUES
-(1, 'Erwin', 'Esparto', 'Binan Laguna', 'eesparto@gmail.com', '09159185291', '2003-01-15', 'Male', 20240101, '1', 17000, 11290, 1, 30000, 0, 1, '2024-02-02'),
+(1, 'Erwin', 'Esparto', 'Binan Laguna', 'eesparto@gmail.com', '09159185291', '2003-01-15', 'Male', 20240101, '1', 5000000, 2500000, 1, 30000, 0, 1, '2024-02-02'),
 (2, 'Lilac', 'Goodrich', 'Binan Laguna', 'lilacgoodrich@gmail.com', '09275826475', '2003-07-28', 'Female', 20240102, '456', 2000, 0, 0, 0, 0, 2, '2024-02-02'),
 (3, 'Joanvic', 'Vargas', 'Binan Laguna', 'vargasjoanvic@gmail.com', '09285963748', '2003-03-23', 'Male', 20240103, '789', 0, 0, 0, 0, 0, 2, '2024-02-02'),
 (4, 'Jemen', 'Pastor', 'Binan Laguna', 'jemenpastor@gmail.com', '09219182710', '2003-05-12', 'Male', 20240104, '098', 0, 0, 0, 0, 0, 2, '2024-02-02'),
@@ -112,7 +100,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `transactionId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `transactionId` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
