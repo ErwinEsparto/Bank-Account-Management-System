@@ -20,7 +20,7 @@
 
     <header>
         <div class="logo">
-            <a href="#"> Bank Name </a>
+            <a href="#"> WIN Bank </a>
         </div>
         <nav>
             <a class="active" href="#"> Home </a>

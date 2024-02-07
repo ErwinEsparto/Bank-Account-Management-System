@@ -24,7 +24,7 @@
     
     <header>
         <div class="logo">
-            <a href="#"> Bank Name </a>
+            <a href="#"> WIN Bank </a>
         </div>
         <nav>
             <a href="home.php?userId=<?php echo $_GET['userId']; ?>"> Home </a>
